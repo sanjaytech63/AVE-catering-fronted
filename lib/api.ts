@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://wholemrtbackend.onrender.com/api",
 });
 
 // 🔥 Add this here
