@@ -36,7 +36,7 @@ export default function LoginPage(): React.JSX.Element {
       toast.success("Login successful!");
       console.log(res, "res");
 
-      if (res?.isAdmin && res?.role === "admin") {
+      if (res?.isAdmin) {
         router.replace("/admin");
       } else {
         router.push("/");

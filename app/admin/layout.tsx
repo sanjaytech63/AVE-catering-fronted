@@ -52,13 +52,13 @@ export default function AdminLayout({
 
   const handleLogout = async () => {
     await dispatch(logout());
-    router.replace("/auth/login");
+    router.replace("/");
   };
 
   useEffect(() => {
     if (!isLoading) {
       if (!isAuthenticated || !user?.isAdmin) {
-        router.replace("/auth/login");
+        router.replace("/");
       }
     }
   }, [isAuthenticated, isLoading, user, router]);
@@ -69,7 +69,7 @@ export default function AdminLayout({
         <p className="text-lg font-medium">
           <span>
             <Loader2 className="inline-block mr-2 h-6 w-6 animate-spin" />
-          </span>{" "}
+          </span>
           Loading...
         </p>
       </div>
